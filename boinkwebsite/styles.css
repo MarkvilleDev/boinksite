@@ -4,8 +4,38 @@
     list-style: none;
     text-decoration: none;
 }
+li, a, button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10px;
+    position: fixed;
+    width: 100%;
+    height: 5%;
+}
+.headernav li{
+    display: inline-block;
+    padding: 5% 30px;
+}
 
-.header {
+.headernav li a {
+    transition: all 0.3s ease 0s;
+}
+
+.headernav li a:hover {
+    color: #abbbda;
+}
+body{
+    height: 1500px;
+}
+/* .header {
     width: 100%;
     height: 5%;
     display: block;
@@ -24,11 +54,9 @@
     color: rgb(255, 255, 255);
     font-weight:bold
 }
-body{
-    height: 1500px;
-}
+
 .offset {
     margin-top: 0;
     padding-top: 270px;
     transition: .3s;
-}
+} */
