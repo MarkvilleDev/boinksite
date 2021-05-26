@@ -12,7 +12,7 @@ li, a, button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* font-family: "sunday_morning"; */
     font-weight: 500;
-    color: black;
+    color: #abbbda;
     font-size: 16px;
     text-decoration: none;
 }
@@ -36,7 +36,7 @@ li, a, button {
 }
 
 .headernav li a:hover {
-    color: #abbbda;
+    color: #000f2c;
 }
 body{
     height: 100%;
