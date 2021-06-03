@@ -63,6 +63,12 @@ body{
     float 6s ease-in-out infinite;
 
 }
+.canvasbackground {
+    z-index: 0;
+    transform: translateY(100%);
+    background: url('https://cdn.bitdegree.org/learn/soap-colorful-color-fruit-68525.jpeg') no-repeat center fixed;     
+    background-size: cover;
+}
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -91,7 +97,7 @@ body{
     border: 1px solid black;
 }
 /* .bg {
-    border: 1px #000f2c;
+    object-fit: fill;
 } */
 /* .header {
     width: 100%;
