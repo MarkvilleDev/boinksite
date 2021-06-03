@@ -1,10 +1,10 @@
 const FPS = 60;
-var bs = 10;
+var bs = 5;
 var bx, by;
 
 var pxpfx, pxpfy;
 var canvas, context;
-// var wd, ht;
+var wd, ht;
 
 canvas = document.getElementById("bg");
 context = canvas.getContext("2d");
@@ -26,14 +26,21 @@ if (Math.floor(Math.random() *2) == 0) {
 function update() {
     bx += pxpfx;
     by += pxpfy;
-    context.fillStyle = "black";
+    context.fillStyle = "#2f4672";
     context.fillRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "yellow";
-    context.fillRect(bx - bs/2, by - bs/2, bs, bs);
+    context.beginPath();
+    wd = window.innerWidth;
+    ht = window.innerHeight
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = "white";
+    context.arc(bx - bs/2,by - bs/2,bs/2, 0,2*Math.PI);
+    context.stroke();
+
     if (bx-bs/2 < 0&&pxpfx<0) {
         pxpfx = -pxpfx;
     }
-    if (bx + bs/2 > canvas.width && pxpfx >0) {
+    if (bx + bs/2 > wd && pxpfx >0) {
         pxpfx = -pxpfx;
     }
     if (by - bs/2 < 0 && pxpfy<0) {
@@ -42,9 +49,9 @@ function update() {
     if (by + bs/2 > canvas.height && pxpfy>0) {
         pxpfy = -pxpfx;
     }
-    // console.log("working");
+
 }
-// function init() {
-//     canvas.width = window.innerWidth;
-//     canvas.height = window.innerHeight;
-// }
+function init() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
