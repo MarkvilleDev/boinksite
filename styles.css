@@ -42,12 +42,15 @@ body{
     height: 100%;
 }
 .comingsoon {
+    z-index: 1;
     font-family: "sunday_morning";
     font-size:  160px;
+    color: white;
 }
 .textcomingsoon {
     font-family: "sunday_morning";
     font-size: 50px;
+    color: white;
 }
 .blockcomingsoon {
     /* border: 3px solid black; */
@@ -69,6 +72,9 @@ body{
         transform: translateY(0px);
     }
 }
+/* .bg {
+    border: 1px #000f2c;
+} */
 /* .header {
     width: 100%;
     height: 5%;
