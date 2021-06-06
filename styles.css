@@ -96,6 +96,11 @@ body{
 .downloadappstore {
     border: 1px solid black;
 }
+canvas {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
 /* .bg {
     object-fit: fill;
 } */
