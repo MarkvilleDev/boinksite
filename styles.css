@@ -27,7 +27,7 @@ li, a, button {
 }
 .headernav li{
     display: inline-block;
-    padding: 10px 35px;
+    padding: 10px 15px;
 }
 
 .headernav li a {
@@ -113,11 +113,10 @@ canvas {
     height: 100%;
 }
 .logocontainer {
-    vertical-align: middle;
     margin-right: 7.5%;
 }
 .logoimage {
-    height: 100%;
+    height: 75%;
     width: 50%;
     float: right;
 }
@@ -152,12 +151,13 @@ canvas {
 .date {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
+    font-size: 75%;
 }
 .markville {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
     float: right;
-    font-size: 12px;
+    font-size: 50%;
 }
 .email {
     width: 25%;
@@ -168,4 +168,7 @@ canvas {
     justify-content: flex;
     text-align: left;
     align-items: center;
+}
+.email a {
+    font-size: 75%;
 }
