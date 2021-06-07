@@ -1,5 +1,5 @@
 const FPS = 60;
-var bs = 10;
+var bs = 15;
 var bx, by;
 
 var pxpfx, pxpfy;
@@ -23,22 +23,22 @@ if (Math.floor(Math.random() *2) == 0) {
     pxpfy = -pxpfy;
 }
 function update() {
-    context.fillStyle = "#2f4672";
     bx += pxpfx;
     by += pxpfy;
     context.canvas.width = document.documentElement.clientWidth;
     context.canvas.height = document.documentElement.clientHeight;
+    context.fillStyle = "#2f4672";
     context.fillRect(0, 0, canvas.width, canvas.height);
     context.beginPath();
-    wd = window.innerWidth;
-    ht = window.innerHeight;
+    wd = context.canvas.width;
+    ht = context.canvas.height;
     context.fill();
-    context.lineWidth = 7;
+    context.lineWidth = 15;
     context.strokeStyle = "white";
     context.arc(bx - bs/2,by - bs/2,bs/2, 0,2*Math.PI);
     context.stroke();
 
-    if (bx-bs/2 < 0&&pxpfx<0) {
+    if (bx-bs/2 < 0 && pxpfx<0) {
         pxpfx = -pxpfx;
     }
     if (bx + bs/2 > wd && pxpfx >0) {
@@ -48,7 +48,7 @@ function update() {
         pxpfy = -pxpfy;
     }
     if (by + bs/2 > ht && pxpfy>0) {
-        pxpfy = -pxpfx;
+        pxpfy = -pxpfy;
     }
 
 }

@@ -18,27 +18,27 @@ li, a, button {
 .headerclass {
     display: flex;
     z-index: 1;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding: 10px 10px;
     position: fixed;
     width: 100%;
     height: 5%;
-    background:#e4e4e4;
 }
 .headernav li{
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 35px;
 }
 
 .headernav li a {
     transition: all 0.3s ease 0s;
+    color: white;
 }
 
 .headernav li a:hover {
     color: #000f2c;
 }
-body{
+html, body{
     height: 100%;
 }
 .comingsoon {
@@ -62,12 +62,6 @@ body{
     animation: fadein 1s ease forwards,
     float 6s ease-in-out infinite;
 
-}
-.canvasbackground {
-    z-index: 0;
-    transform: translateY(100%);
-    background: url('https://cdn.bitdegree.org/learn/soap-colorful-color-fruit-68525.jpeg') no-repeat center fixed;     
-    background-size: cover;
 }
 @keyframes float {
     0% {
@@ -101,31 +95,77 @@ canvas {
     width: 100%;
     position: fixed;
 }
-/* .bg {
-    object-fit: fill;
-} */
-/* .header {
+.footer {
     width: 100%;
-    height: 5%;
+    height: 10%;
     display: block;
-    background-color:#2f4672;
-    list-style: none;
-    text-align: center;
-    padding: 5% 0 5% 0;
-    position: fixed;
+    overflow: hidden;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: #d4d4d4;
+    position: absolute;
+    transform: translateY(1000%);
 }
-.header > li {
+.innerfooter {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.logocontainer {
+    vertical-align: middle;
+    margin-right: 7.5%;
+}
+.logoimage {
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+.textmarkville {
+    width: 50%;
+    height: 100%;
     display: inline-block;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0 5% 0 5%;
 }
-.header >li >a {
-    color: rgb(255, 255, 255);
-    font-weight:bold
+.innerfooter .logocontainer {
+    width: 25%;
+    float: right;
+    height: 100%;
+    display: block;
 }
-
-.offset {
-    margin-top: 0;
-    padding-top: 270px;
-    transition: .3s;
-} */
+.innerfooter .logocontainer img {
+    width: auto;
+    height: 100%;
+}
+.datewrapper {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.clubwrapper {
+    height: 50%;
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+}
+.date {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+.markville {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    float: right;
+    font-size: 12px;
+}
+.email {
+    width: 25%;
+    float: left;
+    height: 100%;
+    display: flex;
+    margin-left: 7.5%;
+    justify-content: flex;
+    text-align: left;
+    align-items: center;
+}
