@@ -5,9 +5,22 @@ var bx, by;
 var pxpfx, pxpfy;
 var canvas, context;
 var wd, ht;
+var audios = [
+    new Audio("one.mp3"),
+    new Audio("two.mp3"),
+    new Audio("three.mp3"),
+    new Audio("four.mp3"),
+    new Audio("five.mp3"),
+    new Audio("six.mp3")
+];
 
 canvas = document.getElementById("bg");
 context = canvas.getContext("2d");
+
+function genrandom() {
+    var ans = Math.floor(Math.random()*6);
+    return ans;
+}
 
 setInterval(update, 1000 / FPS);
 bx = canvas.width /2;
@@ -40,19 +53,18 @@ function update() {
 
     if (bx-bs/2 < 0 && pxpfx<0) {
         pxpfx = -pxpfx;
+        audios[genrandom()].play();
     }
     if (bx + bs/2 > wd && pxpfx >0) {
         pxpfx = -pxpfx;
+        audios[genrandom()].play();
     }
     if (by - bs/2 < 0 && pxpfy<0) {
         pxpfy = -pxpfy;
+        audios[genrandom()].play();
     }
     if (by + bs/2 > ht && pxpfy>0) {
         pxpfy = -pxpfy;
+        audios[genrandom()].play();
     }
-
 }
-// function init() {
-//     canvas.width = window.innerWidth;
-//     canvas.height = window.innerHeight;
-// }
