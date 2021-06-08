@@ -5,7 +5,7 @@ var bx, by;
 var pxpfx, pxpfy;
 var canvas, context;
 var wd, ht;
-var audios = [];
+// var audios = [];
 
 canvas = document.getElementById("bg");
 context = canvas.getContext("2d");
@@ -44,7 +44,7 @@ if (Math.floor(Math.random() *2) == 0) {
 //     ]
 // }
 function update() {
-    init();
+    // init();
     bx += pxpfx;
     by += pxpfy;
     context.canvas.width = document.documentElement.clientWidth;
