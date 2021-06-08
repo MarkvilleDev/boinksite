@@ -5,14 +5,7 @@ var bx, by;
 var pxpfx, pxpfy;
 var canvas, context;
 var wd, ht;
-var audios = [
-    new Audio("one.mp3"),
-    new Audio("two.mp3"),
-    new Audio("three.mp3"),
-    new Audio("four.mp3"),
-    new Audio("five.mp3"),
-    new Audio("six.mp3")
-];
+var audios = [];
 
 canvas = document.getElementById("bg");
 context = canvas.getContext("2d");
@@ -35,7 +28,23 @@ if (Math.floor(Math.random() *2) == 0) {
 if (Math.floor(Math.random() *2) == 0) {
     pxpfy = -pxpfy;
 }
+// function playAudio() {
+//     const media = this.videoplayer.nativeElement;
+//     media.muted = true;
+//     media.play();
+// }
+// function init() {
+//     audios = [
+//         new Audio("one.mp3"),
+//         new Audio("two.mp3"),
+//         new Audio("three.mp3"),
+//         new Audio("four.mp3"),
+//         new Audio("five.mp3"),
+//         new Audio("six.mp3")
+//     ]
+// }
 function update() {
+    init();
     bx += pxpfx;
     by += pxpfy;
     context.canvas.width = document.documentElement.clientWidth;
@@ -53,18 +62,18 @@ function update() {
 
     if (bx-bs/2 < 0 && pxpfx<0) {
         pxpfx = -pxpfx;
-        audios[genrandom()].play();
+        // audios[genrandom()].play();
     }
     if (bx + bs/2 > wd && pxpfx >0) {
         pxpfx = -pxpfx;
-        audios[genrandom()].play();
+        // audios[genrandom()].play();
     }
     if (by - bs/2 < 0 && pxpfy<0) {
         pxpfy = -pxpfy;
-        audios[genrandom()].play();
+        // audios[genrandom()].play();
     }
     if (by + bs/2 > ht && pxpfy>0) {
         pxpfy = -pxpfy;
-        audios[genrandom()].play();
+        // audios[genrandom()].play();
     }
 }
